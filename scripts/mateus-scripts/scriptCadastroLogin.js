@@ -19,7 +19,7 @@ document
     );
 
     if (response.ok) {
-      window.location.replace("https://www.yoursite.com");
+      window.location.replace("https://studyflex.vercel.app/index.html");
     } else {
       alert("Erro ao cadastrar usuário.");
     }
