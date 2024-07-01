@@ -72,7 +72,7 @@ async function fetchSubjects(filter = "") {
 
     // Busca as tarefas
     const responseTarefas = await fetch(
-      "https://backend-studyflex.onrender.com//tarefas",
+      "https://backend-studyflex.onrender.com/tarefas",
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },
