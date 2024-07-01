@@ -4,7 +4,10 @@ const URL_MATERIAS_PROGRESSO = `https://backend-studyflex.onrender.com/materias`
 //Função para carregar o JSON
 function carregarDados() {
   fetch(URL_MATERIAS_PROGRESSO)
-    .then((response) => response.json())
+    .then((response) => {
+      const data = response.json();
+      console.log(data);
+    })
     .then((data) => {
       atualizarProgresso(data);
     })

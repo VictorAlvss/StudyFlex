@@ -1,6 +1,6 @@
 //URL API DE DADOS
 const URL_TAREFAS = "https://backend-studyflex.onrender.com/tarefas";
-const URL_MATERIAS = "https://backend-studyflex.onrender.com/materias"; // adicionei a url de matérias
+const URL_MATERIAS = "https://backend-studyflex.onrender.com/materias";
 const URL_NAVBARS = "https://backend-studyflex.onrender.com/janelas";
 
 //NOME DA PÁGINA QUE ESTAMOS

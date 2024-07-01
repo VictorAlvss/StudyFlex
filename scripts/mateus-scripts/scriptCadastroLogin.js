@@ -19,6 +19,7 @@ document
     );
 
     if (response.ok) {
+      window.location.replace("https://www.yoursite.com");
     } else {
       alert("Erro ao cadastrar usuário.");
     }
