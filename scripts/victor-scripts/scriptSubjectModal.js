@@ -21,7 +21,6 @@ closeSubjectBtn.addEventListener("click", () => {
 // Evento de enviar o formulário
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  console.log("Formulário enviado");
 
   const formData = new FormData(form);
 
