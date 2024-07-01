@@ -150,7 +150,7 @@ async function deleteSubject(materiaId, materiaNome, subjectItem) {
   try {
     // Buscar as tarefas associadas à matéria
     const responseTarefas = await fetch(
-      `https://backend-studyflex.onrender.com//tarefas?materia=${materiaNome}`,
+      `https://backend-studyflex.onrender.com/tarefas?materia=${materiaNome}`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -169,7 +169,7 @@ async function deleteSubject(materiaId, materiaNome, subjectItem) {
     // Apagar todas as tarefas associadas
     for (const tarefa of tarefas) {
       await fetch(
-        `https://backend-studyflex.onrender.com//tarefas/${tarefa.id}`,
+        `https://backend-studyflex.onrender.com/tarefas/${tarefa.id}`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
