@@ -1,0 +1,159 @@
+#notesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  position: relative; /* Adicionado para posicionamento relativo */
+}
+
+.note {
+  background-color: #f9f9f9;
+  border-radius: 19px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.525);
+  padding: 20px;
+  width: 280px;
+  height: 300px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.note h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.note p {
+  font-size: 14px;
+}
+
+.note .edit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.add {
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  position: absolute; /* Posicionamento absoluto para o botão */
+  transition: all 0.3s ease; /* Transição suave para o movimento */
+  margin-top: 370px;
+  margin-left: 480px;
+  background-color: #414b3b;
+}
+
+.edit {
+  transition: transform 0.3s ease; /* Define a transição para suavizar o efeito */
+}
+
+.edit:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do elemento em 10% */
+  background: #747070;
+}
+.delete:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do elemento em 10% */
+}
+
+.add:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do elemento em 10% */
+  background: #747070;
+}
+
+.save:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do elemento em 10% */
+  background: #747070;
+}
+
+.note-red {
+  background: #e68b86;
+}
+
+.note-yellow {
+  background: #edbf74;
+}
+
+.note-blue {
+  background: #9daadf;
+}
+
+.tit {
+  width: 166px;
+  height: 24px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.subtit {
+  width: 222px;
+  height: 168px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.date {
+  position: absolute;
+  margin-top: 50px;
+  right: 100px;
+  font-size: 12px;
+  color: #000000;
+  font-family: "Lato";
+}
+
+.delete {
+  position: absolute;
+  margin-top: -200px;
+  right: 10px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+}
+
+.edit,
+.save {
+  cursor: pointer;
+}
+
+.save {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  background: #000000;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+.edit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  background: #000000;
+  padding-left: 8px;
+  padding-top: 9px;
+}

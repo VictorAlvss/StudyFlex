@@ -1,0 +1,109 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* COMEÇO - LOGO DO SITE */
+
+.website-logo {
+    display: flex;
+}
+
+/* FIM - LOGO DO SITE */
+
+/* COMEÇO - CALENDÁRIO E PROGRESSO DAS DISCIPLINAS */
+
+.container-calendar-total{
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*FIM - CALENDÁRIO E PROGRESSO DAS DISCIPLINAS */
+
+/* COMEÇO - PROGRESSOS DAS DISCIPLINAS */
+
+
+#progress-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container-progress {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.116);
+}
+
+.tituloProgresso {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.task-progress-info {
+    margin-bottom: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-barClone {
+    width: 100%;
+    height: 12px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.level-progressClone {
+    height: 100%;
+    background-color: #8AA17B;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.navigation button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    color: #586352;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 1em;
+    transition: 0.4s ease; 
+}
+
+.navigation button i {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.navigation button:hover {
+    color: white;
+    background-color: #8AA17B; 
+}
+
+.navigation button:disabled {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* FIM - PROGRESSOS DAS DISCIPLINAS */

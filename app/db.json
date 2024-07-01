@@ -1,0 +1,15 @@
+{
+  "tarefas": [],
+  "materias": [],
+  "notas": [
+    {
+      "title": "Título da Nota",
+      "content": "Conteúdo da nota",
+      "date": "domingo, 30 de junho de 2024",
+      "colorClass": "note-yellow",
+      "id": 4
+    }
+  ],
+  "janelas": [],
+  "usuarios": []
+}
