@@ -1,5 +1,5 @@
 // URL da API
-const URL_MATERIA = "http://localhost:3000/materias";
+const URL_MATERIA = "https://backend-studyflex.vercel.app/materias";
 
 const form = document.getElementById("newSubjectForm");
 const subjectsList = document.getElementById("subjectsList");
@@ -72,10 +72,13 @@ async function fetchSubjects(filter = "") {
     const materias = await responseMaterias.json();
 
     // Busca as tarefas
-    const responseTarefas = await fetch("http://localhost:3000/tarefas", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    });
+    const responseTarefas = await fetch(
+      "https://backend-studyflex.vercel.app/tarefas",
+      {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
 
     if (!responseTarefas.ok) {
       throw new Error(
@@ -147,14 +150,18 @@ async function deleteSubject(materiaId, materiaNome, subjectItem) {
 
   try {
     // Buscar as tarefas associadas à matéria
-    const responseTarefas = await fetch(`http://localhost:3000/tarefas?materia=${materiaNome}`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    });
+    const responseTarefas = await fetch(
+      `https://backend-studyflex.vercel.app/tarefas?materia=${materiaNome}`,
+      {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
 
     if (!responseTarefas.ok) {
       throw new Error(
-        "Erro na resposta da rede ao buscar tarefas: " + responseTarefas.statusText
+        "Erro na resposta da rede ao buscar tarefas: " +
+          responseTarefas.statusText
       );
     }
 
@@ -162,7 +169,7 @@ async function deleteSubject(materiaId, materiaNome, subjectItem) {
 
     // Apagar todas as tarefas associadas
     for (const tarefa of tarefas) {
-      await fetch(`http://localhost:3000/tarefas/${tarefa.id}`, {
+      await fetch(`https://backend-studyflex.vercel.app/tarefas/${tarefa.id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });
@@ -182,7 +189,10 @@ async function deleteSubject(materiaId, materiaNome, subjectItem) {
       console.error("Erro na resposta:", errorText);
     }
   } catch (error) {
-    console.error("Erro ao deletar a matéria e suas tarefas associadas:", error);
+    console.error(
+      "Erro ao deletar a matéria e suas tarefas associadas:",
+      error
+    );
     alert(
       "Houve um problema ao deletar a matéria e suas tarefas associadas. Por favor, tente novamente."
     );

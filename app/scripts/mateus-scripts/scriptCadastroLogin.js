@@ -7,13 +7,16 @@ document
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const response = await fetch("http://localhost:3000/usuarios", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, email, password }),
-    });
+    const response = await fetch(
+      "https://backend-studyflex.vercel.app/usuarios",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, email, password }),
+      }
+    );
 
     if (response.ok) {
       window.location.href = "./login.html";

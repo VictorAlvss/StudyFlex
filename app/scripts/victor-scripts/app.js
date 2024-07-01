@@ -21,26 +21,6 @@ const taskContainer = document.getElementById("taskContainer");
 
 //FUNCTIONS --------------
 
-/*
-fetch(URL_MATERIAS)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Erro ao realizar a requisição");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    for (let i = 0; i < data.length; i++) {
-      var childElement = document.createElement("option");
-      childElement.textContent = data[i].nome;
-      childElement.childElement = taskSubject.appendChild(childElement);
-    }
-  })
-  .catch((error) => {
-    // Handle any errors that occurred during the fetch
-    console.error("Erro ao realizar a requisição", error);
-  });*/
-
 //Toggling active style in the aside options
 for (let asideOption of asideOptions) {
   //function to toggle style
@@ -56,23 +36,3 @@ for (let asideOption of asideOptions) {
     toAddStyle.classList.add("active");
   });
 }
-
-/*
-    // Use the JSON data
-    for (let i = 0; i < data.length; i++) {
-      /*var taskHtmlElement = `
-          <article class="task-preview note">
-              <a href="#"><h3 class="task-title">${data[i].nome}</h3></a>
-              <a href="#" class="task-subject">${data[i].materia}</a>
-              <p class="task-description">
-              ${data[i].descricao}
-              </p>
-              <button  class="task-details">
-                <img
-                  src="./assets/imgs/details_icon.png"
-                  alt="Detalhes icone"
-                  class="icon task-icon"
-                />
-              </button>
-            </article>
-    `;*/
