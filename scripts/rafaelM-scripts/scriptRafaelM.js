@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", carregarDados);
+const URL_MATERIAS_PROGRESSO = `https://backend-studyflex.onrender.com/tarefas`;
 
 //Função para carregar o JSON
 function carregarDados() {
-  fetch("db.json")
+  fetch(URL_MATERIAS_PROGRESSO)
     .then((response) => response.json())
     .then((data) => {
       atualizarProgresso(data);
