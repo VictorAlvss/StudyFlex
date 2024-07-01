@@ -1,4 +1,4 @@
-const URL_NOTAS = "https://backend-studyflex.vercel.app/notas";
+const URL_NOTAS = "https://backend-studyflex.onrender.com/notas";
 const colorClasses = ["note-red", "note-yellow", "note-blue"];
 
 document.addEventListener("DOMContentLoaded", async () => {

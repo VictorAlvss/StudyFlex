@@ -1,5 +1,5 @@
 // URL da API
-const URL_MATERIA = "https://backend-studyflex.vercel.app/materias";
+const URL_MATERIA = "https://backend-studyflex.onrender.com/materias";
 
 const form = document.getElementById("newSubjectForm");
 const subjectsList = document.getElementById("subjectsList");
@@ -72,7 +72,7 @@ async function fetchSubjects(filter = "") {
 
     // Busca as tarefas
     const responseTarefas = await fetch(
-      "https://backend-studyflex.vercel.app/tarefas",
+      "https://backend-studyflex.onrender.com//tarefas",
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -150,7 +150,7 @@ async function deleteSubject(materiaId, materiaNome, subjectItem) {
   try {
     // Buscar as tarefas associadas à matéria
     const responseTarefas = await fetch(
-      `https://backend-studyflex.vercel.app/tarefas?materia=${materiaNome}`,
+      `https://backend-studyflex.onrender.com//tarefas?materia=${materiaNome}`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -168,10 +168,13 @@ async function deleteSubject(materiaId, materiaNome, subjectItem) {
 
     // Apagar todas as tarefas associadas
     for (const tarefa of tarefas) {
-      await fetch(`https://backend-studyflex.vercel.app/tarefas/${tarefa.id}`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-      });
+      await fetch(
+        `https://backend-studyflex.onrender.com//tarefas/${tarefa.id}`,
+        {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+        }
+      );
     }
 
     // Apagar a matéria

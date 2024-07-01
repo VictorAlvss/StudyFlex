@@ -8,7 +8,7 @@ document
     const password = document.getElementById("password").value;
 
     const response = await fetch(
-      "https://backend-studyflex.vercel.app/usuarios",
+      "https://backend-studyflex.onrender.com/usuarios",
       {
         method: "POST",
         headers: {

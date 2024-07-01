@@ -1,7 +1,7 @@
 //URL API DE DADOS
-const URL_TAREFAS = "https://backend-studyflex.vercel.app/tarefas";
-const URL_MATERIAS = "https://backend-studyflex.vercel.app/materias"; // adicionei a url de matérias
-const URL_NAVBARS = "https://backend-studyflex.vercel.app/janelas";
+const URL_TAREFAS = "https://backend-studyflex.onrender.com/tarefas";
+const URL_MATERIAS = "https://backend-studyflex.onrender.com/materias"; // adicionei a url de matérias
+const URL_NAVBARS = "https://backend-studyflex.onrender.com/janelas";
 
 //NOME DA PÁGINA QUE ESTAMOS
 let pageTitle = document.querySelector(".homescreen-title").textContent;
@@ -156,12 +156,12 @@ function returnURL(key, value, sorting) {
   //VALUE - valor da propriedade
   //SORTING - modo de ordenação das tarefas (query de ordenação do json server)
   //URL BASE DA PÁGINA DE DASHBOARD (APRESENTA APENAS AS TAREFAS ATIVAS - STATUS 2 E 3)
-  let URL_DASHBOARD = `https://backend-studyflex.vercel.app/tarefas?status=2&status=3&_page=${page}&_limit=${taskPerPage}`;
+  let URL_DASHBOARD = `https://backend-studyflex.onrender.com/tarefas?status=2&status=3&_page=${page}&_limit=${taskPerPage}`;
   //URL BASE DA PÁGINA DE TAEFAS (APRESENTA TODDAS AS TAREFAS CRIADAS)
-  let URL_TAREFAS = `https://backend-studyflex.vercel.app/tarefas?_page=${page}&_limit=${taskPerPage}`;
+  let URL_TAREFAS = `https://backend-studyflex.onrender.com/tarefas?_page=${page}&_limit=${taskPerPage}`;
 
   if (key == "materiaId" && value != 0) {
-    let url = `https://backend-studyflex.vercel.app/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
+    let url = `https://backend-studyflex.onrender.com/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
     if (sorting) {
       url + sorting;
     }
@@ -192,19 +192,19 @@ function returnURL(key, value, sorting) {
 
   //RETORNAS AS URLS QUE TIVEREM ALGUM TIPO DE FILTRO NAS TAREFAS + ORDENAÇÃO
   if (pageTitle === "Dashboard") {
-    URL_DASHBOARD = `https://backend-studyflex.vercel.app/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
+    URL_DASHBOARD = `https://backend-studyflex.onrender.com/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
     if (sorting) {
       return URL_DASHBOARD + sorting;
     }
     return URL_DASHBOARD;
   } else if (pageTitle === "Tarefas") {
-    URL_TAREFAS = `https://backend-studyflex.vercel.app/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
+    URL_TAREFAS = `https://backend-studyflex.onrender.com/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
     if (sorting) {
       return URL_TAREFAS + sorting;
     }
     return URL_TAREFAS;
   } else {
-    URL_TAREFAS = `https://backend-studyflex.vercel.app/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
+    URL_TAREFAS = `https://backend-studyflex.onrender.com/tarefas?${key}=${value}&_page=${page}&_limit=${taskPerPage}`;
   }
   return URL_TAREFAS;
 }
@@ -656,7 +656,7 @@ function deleteTask(taskButton) {
 
   deleteButton.addEventListener("click", (event) => {
     let taskId = taskButton.dataset.taskid;
-    deleteTaskURL(`https://backend-studyflex.vercel.app/tarefas/${taskId}`);
+    deleteTaskURL(`https://backend-studyflex.onrender.com/tarefas/${taskId}`);
     message.close();
   });
 
@@ -667,7 +667,7 @@ function deleteTask(taskButton) {
 
 function deleteNav(navButton) {
   let taskId = navButton.id;
-  deleteTaskURL(`https://backend-studyflex.vercel.app/janelas/${taskId}`);
+  deleteTaskURL(`https://backend-studyflex.onrender.com/janelas/${taskId}`);
 }
 
 function getStatusHTML(status, mode) {
@@ -858,7 +858,7 @@ async function openTask(taskElement, method) {
   if (method === "put") {
     taskElementID = taskElement.dataset.taskid;
 
-    url = `https://backend-studyflex.vercel.app/tarefas/${taskElementID}`;
+    url = `https://backend-studyflex.onrender.com/tarefas/${taskElementID}`;
   } else {
     let hoje = new Date();
 
@@ -869,7 +869,7 @@ async function openTask(taskElement, method) {
     dataAtual = `${ano}-${mes}-${dia}`;
   }
 
-  fetch(url ? url : `https://backend-studyflex.vercel.app/tarefas/`)
+  fetch(url ? url : `https://backend-studyflex.onrender.com/tarefas/`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Houve um erro ao pesquisar a tarefa!");
