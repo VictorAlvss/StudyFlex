@@ -19,8 +19,6 @@ document
     );
 
     if (response.ok) {
-      window.location.href = "./login.html";
-      // document.getElementById('signup-form').reset();
     } else {
       alert("Erro ao cadastrar usuário.");
     }

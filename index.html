@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StudyFlex</title>
+    <title>Login - StudyFlex</title>
     <link rel="stylesheet" href="./styles/login.css" />
     <link
       rel="icon"
@@ -17,28 +17,13 @@
   </head>
   <body>
     <div class="container">
-      <div class="illustration">
-        <img
-          src="./assets/imgs/imagem-cadastro.png"
-          alt="Ilustração de pessoas estudando"
-        />
-      </div>
       <div class="form-container">
         <img
           src="./assets/imgs/StudyFlex_page_logo.svg"
           alt="logo da plataforma"
         />
-        <h2>Cadastre-se</h2>
-        <form id="signup-form">
-          <div class="input-container">
-            <i class="fas fa-user"></i>
-            <input
-              type="text"
-              id="username"
-              placeholder="Nome de usuário"
-              required
-            />
-          </div>
+        <h2>Faça login na sua conta!</h2>
+        <form id="login-form">
           <div class="input-container">
             <i class="fas fa-envelope"></i>
             <input type="email" id="email" placeholder="Email" required />
@@ -47,11 +32,26 @@
             <i class="fas fa-lock"></i>
             <input type="password" id="password" placeholder="Senha" required />
           </div>
-          <button type="submit">Cadastrar</button>
+          <div class="options">
+            <label><input type="checkbox" id="remember" /> Relembrar</label>
+            <a href="#">Esqueceu sua senha?</a>
+          </div>
+          <button type="submit">Login</button>
         </form>
+        <p>
+          Não possui uma conta?
+          <a href="./cadastro.html">Clique aqui e crie agora!</a>
+        </p>
+      </div>
+      <div class="illustration">
+        <img
+          src="./assets/imgs/imagem-login.png"
+          alt="Ilustração de pessoa estudando"
+        />
       </div>
     </div>
-    <script src="./scripts/mateus-scripts/scriptCadastroLogin.js"></script>
+
+    <script src="./scripts/mateus-scripts/scriptLogin.js"></script>
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
