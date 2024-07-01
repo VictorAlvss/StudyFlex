@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   // Função para carregar tarefas do servidor
   function loadTasks() {
-    return fetch("http://localhost:3000/tarefas")
+    return fetch("https://backend-studyflex.onrender.com/tarefas")
       .then((response) => response.json())
       .then((data) => {
         // Mapeando os dados recebidos para o formato necessário
